@@ -27,7 +27,7 @@ void decodeMessages(char *message)
     for (int i = 0; i < strlen(message); i++)
     {
         if (isWordPresent(message, "your_word_here"))
-        { // Replace "your_word_here" with the word you want to check
+        {
             solution[count] = message[i];
             count++;
         }
