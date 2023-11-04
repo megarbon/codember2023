@@ -4,7 +4,6 @@
 #include <ctype.h>
 
 #define MAX_WORD_LENGTH 100
-#define MAX_WORDS 100
 
 void toLower(char *str)
 {
@@ -26,7 +25,13 @@ int main()
     FILE *file;
     char word[MAX_WORD_LENGTH];
     char filename[] = "words.txt";
-    struct WordCount words[MAX_WORDS];
+    struct WordCount *words = malloc(sizeof(struct WordCount));
+    if (words == NULL)
+    {
+        fprintf(stderr, "Memory allocation failed");
+        return 1;
+    }
+    int maxWords = 1;
     int wordCount = 0;
 
     file = fopen(filename, "r");
@@ -34,6 +39,7 @@ int main()
     if (file == NULL)
     {
         printf("Could not open file %s", filename);
+        free(words);
         return 1;
     }
 
@@ -52,6 +58,16 @@ int main()
         }
         if (!found)
         {
+            if (wordCount == maxWords)
+            {
+                maxWords *= 2;
+                words = realloc(words, maxWords * sizeof(struct WordCount));
+                if (words == NULL)
+                {
+                    fprintf(stderr, "Memory reallocation failed");
+                    return 1;
+                }
+            }
             strcpy(words[wordCount].word, word);
             words[wordCount].count = 1;
             wordCount++;
@@ -65,5 +81,6 @@ int main()
         printf("%s%d", words[i].word, words[i].count);
     }
 
+    free(words);
     return 0;
 }
