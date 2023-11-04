@@ -1,7 +1,6 @@
 # Codember 2023
 
 ¡Bienvenido a mi repositorio de desafíos de programación en C! Este repositorio contiene soluciones a varios desafíos de programación que he abordado utilizando el lenguaje de programación C.
-[codember](https://codember.dev)
 ## Iniciativa y Cursos
 
 Este proyecto está inspirado en la iniciativa de [**Codevember**](https://codember.dev/) de [**Midudev**](https://twitter.com/midudev), que fomenta la resolución diaria de desafíos de programación durante el mes de noviembre. Además, estoy siguiendo el curso de C impartido por [**Makigas**](https://www.youtube.com/playlist?list=PLTd5ehIj0goOAWdpCpghXiRCmEOrJJLEW), que me ha brindado una base sólida para abordar estos desafíos.
