@@ -11,7 +11,7 @@ int applyOperation(char operation, int num)
     case '*':
         return num * num;
     case '&':
-        printf("%d\n", num);
+        printf("%d", num);
         return num;
     default:
         return num;
@@ -33,6 +33,5 @@ int main()
         }
     }
 
-    printf("The numeric value is %d\n", num);
     return 0;
 }
