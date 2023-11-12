@@ -24,7 +24,7 @@ int main()
 {
     FILE *file;
     char word[MAX_WORD_LENGTH];
-    char filename[] = "words.txt";
+    char filename[] = "data_01.txt";
     struct WordCount *words = malloc(sizeof(struct WordCount));
     if (words == NULL)
     {
