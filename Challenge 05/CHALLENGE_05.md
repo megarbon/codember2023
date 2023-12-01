@@ -1,7 +1,7 @@
 ** The Final Problem **
 Finally, hackers have managed to access the database and have corrupted it. But it seems they have left a hidden message in the database. Can you find it?
 
-Our database is in .csv format. The columns areid,username,email,age,location.
+Our database is in .csv format. The columns are id, username, email, age, location.
 
 A user is only valid if:
 
