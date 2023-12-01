@@ -55,7 +55,7 @@ int main()
         {
             // Increment invalidCount and print the invalid password
             invalidCount++;
-            if (invalidCount == 42)
+            if (invalidCount == 13)
             {
                 printf("Invalid password number 42: %s\n", password);
             }
